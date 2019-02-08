@@ -1,3 +1,5 @@
+// https://github.com/PacktPublishing/Swift-Data-Structure-and-Algorithms
+
 public struct Queue<T>: ExpressibleByArrayLiteral {
     public private(set) var elements: Array<T> = []
     public mutating func push(value: T){

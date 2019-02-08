@@ -1,3 +1,5 @@
+// https://github.com/PacktPublishing/Swift-Data-Structure-and-Algorithms
+
 public struct Stack<T> {
     private var elements = [T]()
     public init(){}
