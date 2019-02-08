@@ -40,7 +40,7 @@ public struct PriorityQueue<T: Comparable> {
 
         // Consider compatibility with Swift2
 
-        swap(&heap[0], &heap[heap.count - 1])
+        heap.swapAt(0,heap.count - 1)
         let temp = heap.removeLast()
         sink(0)
         return temp
@@ -49,7 +49,7 @@ public struct PriorityQueue<T: Comparable> {
     // MARK: remove
     public mutating func remove(_ item: T) {
         if let index = heap.index(of: item) {
-            swap(&heap[0], &heap[heap.count - 1])
+            heap.swapAt(index, heap.count - 1)
             heap.removeLast()
             swim(index)
             sink(index)
@@ -85,16 +85,47 @@ public struct PriorityQueue<T: Comparable> {
             if j < (heap.count - 1) && ordered(heap[j], heap[j + 1]) { j += 1 }
             if !ordered(heap[index], heap[j]) { break }
 
-            swap(&heap[index], &heap[j])
+            heap.swapAt(index,j)
             index = j
         }
     }
 
     // MARK: swim
-    private mutating func swin(_ index: Int) {
+    private mutating func swim(_ index: Int) {
         var index = index
         while index > 0 && ordered(heap[(index - 1) / 2], heap[index]) {
-            swap(&heap)
+            heap.swapAt((index - 1) / 2, index)
+            index = (index - 1) / 2
         }
     }
+}
+// MARK: - GeneratorType
+extension PriorityQueue: IteratorProtocol {
+    public typealias Element = T
+    mutating public func next() -> Element? { return pop() }
+}
+
+// MARK: - SequenceType
+extension PriorityQueue: Sequence {
+    public typealias Iterator = PriorityQueue
+    public func makeIterator() -> Iterator { return self }
+}
+
+// MARKL - CollectionType
+extension PriorityQueue: Collection {
+    public typealias Index = Int
+
+    public var startIndex: Int {return heap.startIndex}
+    public var endIndex: Int {return heap.endIndex}
+
+    public subscript(i:Int) -> T { return heap[i] }
+
+    public func index(after i: PriorityQueue.Index) -> PriorityQueue.Index {
+        return heap.index(after: i)
+    }
+}
+
+extension PriorityQueue: CustomStringConvertible, CustomDebugStringConvertible {
+    public var description: String { return heap.description }
+    public var debugDescription: String { return heap.debugDescription }
 }
