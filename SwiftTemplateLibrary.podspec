@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SwiftTemplateLibrary"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "SwiftTemplateLibrary is data structure and algorithm libaray for Swift."
 
   # This description is used to generate tags and improve search results.
@@ -101,7 +101,7 @@ Pod::Spec.new do |spec|
   # ――― Swift version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # Customize swift version
   spec.swift_version = "4.0"
-
+  
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
