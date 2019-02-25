@@ -8,8 +8,8 @@ public func MergeSort<T: Comparable>(_ array: [T]) -> [T] {
     guard array.count > 1 else { return array }
 
     let mid = array.count / 2
-    let left = mergeSort(Array(array[0..<mid]))
-    let right = mergeSort(Array(array[mid..<array.count]))
+    let left = MergeSort(Array(array[0..<mid]))
+    let right = MergeSort(Array(array[mid..<array.count]))
 
     return merge(leftPile: left, rightPile: right)
 }

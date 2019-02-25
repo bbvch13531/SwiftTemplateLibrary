@@ -45,7 +45,8 @@ public struct CircularBuffer<T> {
         elements.forEach({push(element: $0)})
     }
 
-    @discardableResult public mutating func pop() -> T? {
+    @discardableResult
+    public mutating func pop() -> T? {
         if(isEmpty()){
             return nil
         }
