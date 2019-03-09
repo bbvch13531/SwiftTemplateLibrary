@@ -15,13 +15,13 @@ Data structure and algorithms for swift
 - Double Linked List
 
 Trees
-- Binary Tree
+- Binary Search Tree (implemented as a class)
 
 (Todo)
-- Binary Search Tree
-- B Tree
+- Binary Search Tree (implemented as a enum)
 - AVL
-- B+Tree
+- B Tree
+- B+ Tree
 - Splay Tree
 - Red-black Tree
 - Trie
