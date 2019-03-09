@@ -13,3 +13,15 @@ Data structure and algorithms for swift
 - Priority Queue
 - Stack List
 - Double Linked List
+
+Trees
+- Binary Tree
+
+(Todo)
+- Binary Search Tree
+- B Tree
+- AVL
+- B+Tree
+- Splay Tree
+- Red-black Tree
+- Trie
