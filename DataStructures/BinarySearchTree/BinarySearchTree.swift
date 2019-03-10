@@ -206,13 +206,16 @@ extension BinarySearchTree {
         }
     }
 
-    // 이해 안감.. 다시 공부
+    /*
+        Make issue and working...
+    
     public func predecessor() -> BinarySearchTree? {
 
     }
     public func successor() -> BinarySearchTree? {
 
     }
+    */
 }
 
 // MARK: - Traversal
