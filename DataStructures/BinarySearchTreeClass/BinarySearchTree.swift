@@ -31,11 +31,17 @@ public class BinarySearchTree<T: Comparable> {
     }
 
     public var isLeftChild: Bool {
-        return parent?.left == self
+        guard let left = parent?.left else {
+            return false
+        }
+        return left == self        
     }
 
     public var isRightChild: Bool {
-        return parent?.right == self
+        guard let right = parent?.right else {
+            return false
+        }
+        return right == self
     }
 
     public var hasLeftChild: Bool {
@@ -71,14 +77,14 @@ extension BinarySearchTree {
                 left.insert(value: value)
             } else {
                 left = BinarySearchTree(value: value)                
-                left.parent? = self
+                left?.parent = self
             }
         } else {
             if let right = right {
                 right.insert(value: value)
             } else {
                 right = BinarySearchTree(value: value)
-                right.parent? = self
+                right?.parent = self
             }
         }
     }
@@ -172,7 +178,7 @@ extension BinarySearchTree {
     */
     public func maximum() -> BinarySearchTree {
         var node = self
-        while let next = node.rightt {
+        while let next = node.right {
             node = next
         }
         return node
@@ -186,7 +192,7 @@ extension BinarySearchTree {
     public func depth() -> Int {
         var node = self
         var edges = 0
-        while let parent = node.parnet {
+        while let parent = node.parent {
             node = parent
             edges += 1
         }
@@ -287,5 +293,16 @@ extension BinarySearchTree: CustomStringConvertible, CustomDebugStringConvertibl
             s += "(\(right.description)) <-"
         }
         return s
+    }
+}
+
+// MARK: - override "=="
+extension BinarySearchTree: Equatable  {
+    public static func == (lhs: BinarySearchTree, rhs: BinarySearchTree) -> Bool {
+        return 
+            lhs.parent == rhs.parent &&
+            lhs.value == rhs.value &&
+            lhs.left == rhs.left &&
+            lhs.right == lhs.right
     }
 }
