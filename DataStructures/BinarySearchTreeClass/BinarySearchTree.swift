@@ -31,17 +31,19 @@ public class BinarySearchTree<T: Comparable> {
     }
 
     public var isLeftChild: Bool {
-        guard let left = parent?.left else {
+        if let left = parent?.left else {
+            return left == self        
+        } else {
             return false
         }
-        return left == self        
     }
 
     public var isRightChild: Bool {
-        guard let right = parent?.right else {
+        if let right = parent?.right else {
+            return right == self        
+        } else {
             return false
         }
-        return right == self
     }
 
     public var hasLeftChild: Bool {
