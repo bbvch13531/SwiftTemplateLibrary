@@ -16,9 +16,13 @@ Data structure and algorithms for swift
 
 Trees
 - Binary Search Tree (implemented as a class)
-
-(Todo)
 - Binary Search Tree (implemented as a enum)
+    - boj.kr/3444
+    - boj.kr/13543
+    - boj.kr/13159
+    - boj.kr/2957
+    - boj.kr/5639
+(Todo)
 - AVL
 - B Tree
 - B+ Tree
