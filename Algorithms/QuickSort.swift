@@ -21,7 +21,7 @@ public func QuickSort<T: Comparable>(_ array: [T], lo: Int, hi: Int) -> [T] {
 }
 
 func partition<T: Comparable>(_ array: inout [T], lo: Int, hi: Int, mid: Int) -> Int {
-    var pivot = array[mid]
+    let pivot = array[mid]
     
     var i = lo
     for j in lo..<hi {
