@@ -89,7 +89,7 @@ extension BinarySearchTree {
     /*
         Insert new element in tree.
     */
-    @discardable public func remove() -> BinarySearchTree? {
+    @discardableResult public func remove() -> BinarySearchTree? {
         let replacement: BinarySearchTree?
 
         if let right = right {
