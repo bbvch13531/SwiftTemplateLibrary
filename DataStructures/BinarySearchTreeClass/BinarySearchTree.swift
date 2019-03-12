@@ -1,5 +1,6 @@
 // https://github.com/raywenderlich/swift-algorithm-club/blob/master/Binary%20Search%20Tree/Solution%201/BinarySearchTree.playground/Sources/BinarySearchTree.swift
-
+//  BinarySearchTree.swift
+//  Copyright (c) 2016 Matthijs Hollemans and contributors
 /*
     Binary search tree as a class
 */

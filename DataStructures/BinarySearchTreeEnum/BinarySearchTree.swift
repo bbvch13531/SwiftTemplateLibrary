@@ -1,4 +1,6 @@
-// https://github.com/raywenderlich/swift-algorithm-club/blob/master/Binary%20Search%20Tree/Solution%202/BinarySearchTree.swift
+//  https://github.com/raywenderlich/swift-algorithm-club/blob/master/Binary%20Search%20Tree/Solution%202/BinarySearchTree.swift
+//  BinarySearchTree.swift
+//  Copyright (c) 2016 Matthijs Hollemans and contributors
 /*
   Binary search tree using value types
   The tree is immutable. Any insertions or deletions will create a new tree.

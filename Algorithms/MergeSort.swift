@@ -1,4 +1,7 @@
-// https://github.com/raywenderlich/swift-algorithm-club/blob/master/Merge%20Sort/MergeSort.swift
+//  https://github.com/raywenderlich/swift-algorithm-club/blob/master/Merge%20Sort/MergeSort.swift
+//  MergeSort.swift
+//  Copyright (c) 2016 Matthijs Hollemans and contributors
+
 // - Complexity: O(n log n)
 
 // Recursively sort

@@ -1,4 +1,8 @@
-// Copyright (c) 2015-2017 David Kopec
+//  https://github.com/davecom/SwiftPriorityQueue/blob/master/Sources/SwiftPriorityQueue/SwiftPriorityQueue.swift
+//
+//  SwiftPriorityQueue.swift
+//  SwiftPriorityQueue
+//  Copyright (c) 2015-2017 David Kopec
 
 public struct PriorityQueue<T: Comparable> {
     fileprivate var heap = [T]()
